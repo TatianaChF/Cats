@@ -1,0 +1,83 @@
+.header {
+  background: url("../../assets/images/home/birma.jpg") no-repeat center top / cover;
+  height: 540px;
+  padding-top: 62px;
+  color: #fff;
+  padding-bottom: 322px;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.menu,
+.menu ul {
+  display: flex;
+}
+
+ul, li {
+  display: block;
+
+}
+
+.menu li a {
+  position: relative;
+  text-transform: uppercase; /* делает текст жирным */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 44px;
+  left: -20px;
+}
+
+.menu li {
+  margin-right: 59px;
+}
+
+.menu li a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.offer h1 {
+  position: absolute;
+  width: 600px;
+  height: 79px;
+  top: 500px;
+  color: #000000;
+  font-size: 50px;
+  line-height: 73px;
+}
+
+.offer p {
+  position: absolute;
+  width: 600px;
+  height: 100px;
+  top: 590px;
+  color: black;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.bth {
+  color: #ffffff;
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1em; /* Расстояние между буквами */
+  padding: 17px 47px;
+  transition: all 0.5s ease;
+  border:  solid #000000;
+  border-radius: 57px;
+  background: #000000;
+  position: absolute;
+  width: 250px;
+  height: 35px;
+  top: 710px;
+  text-decoration: none;
+}
+
+.bth:hover {
+  background-color: transparent;
+  color: #000000;
+}
