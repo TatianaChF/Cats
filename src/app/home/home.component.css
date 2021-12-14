@@ -81,3 +81,39 @@ ul, li {
   background-color: transparent;
   color: #000000;
 }
+
+h2 {
+  position: relative;
+  font-size: 36px;
+}
+
+.text {
+  position: relative;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.images {
+  position: relative;
+  margin-top: 58px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.images img {
+  transition: all 0.5s ease;
+}
+
+.images img:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: scale(1.1);
+}
+
+.images img:nth-child(1) {
+  width: 40%;
+}
+
+.images img:nth-child(2) {
+  width: 40%;
+  margin-right: 35px;
+}
