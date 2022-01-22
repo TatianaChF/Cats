@@ -1,0 +1,39 @@
+.header {
+  background: url("../../assets/images/breeds/kotik_one.jpg") no-repeat center top / cover;
+  height: 465px;
+  padding-top: 62px;
+  color: black;
+  padding-bottom: 322px;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.menu,
+.menu li {
+  display: flex;
+}
+
+ul, li {
+  display: block;
+}
+
+.menu li a {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  line-height: 44px;
+  left: -20px;
+}
+
+.menu li {
+  margin-right: 59px;
+}
+
+.menu li a:hover {
+  border-bottom: 1px solid #000;
+}
