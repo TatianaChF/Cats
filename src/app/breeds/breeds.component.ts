@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Breeds } from "../breeds";
 
 @Component({
   selector: 'app-breeds',
