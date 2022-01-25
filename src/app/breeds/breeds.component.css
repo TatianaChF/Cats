@@ -37,3 +37,45 @@ ul, li {
 .menu li a:hover {
   border-bottom: 1px solid #000;
 }
+
+.offer h1 {
+  position: absolute;
+  margin-top: 301px;
+  font-size: 50px;
+  line-height: 73px;
+  left: 316px;
+  font-weight: bolder;
+}
+
+.offer p {
+  position: absolute;
+  margin-top: 385px;
+  font-size: 25px;
+  line-height: 40px;
+  left: 316px;
+  font-weight: normal;
+}
+
+.bth {
+  color: #ffffff;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1em; /* Расстояние между буквами */
+  padding: 17px 47px;
+  transition: all 0.5s ease;
+  border:  solid #000000;
+  border-radius: 57px;
+  background: #000000;
+  position: absolute;
+  width: 268px;
+  height: 35px;
+  margin-top: 495px;
+  left: 316px;
+  text-decoration: none;
+}
+
+.bth:hover {
+  background-color: transparent;
+  color: #000000;
+}
