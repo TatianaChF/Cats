@@ -28,8 +28,10 @@
 </header>
 <section id="about" class="about">
   <div class="breeds">
-    <p>{{breeds.name}}</p>
-    <div><span>id: </span>{{breeds.id}}</div>
-    <div><span>name: </span>{{breeds.name}}</div>
+    <ul class="breeds">
+      <li *ngFor="let breed of breeds">
+        <span class="badge">{{breed.id}}</span> {{breed.name}}
+      </li>
+    </ul>
   </div>
 </section>
