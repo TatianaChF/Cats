@@ -114,3 +114,18 @@ ul, li {
   margin-right: 12px;
   border-radius: 4px 0 0 4px;
 }
+
+.breeds li.selected {
+  background-color: #5F9EA0;
+  color: white;
+}
+
+.breeds li.selected:hover {
+  background-color: #5F9EA0;
+  color: white;
+}
+
+.breeds li.selected:active {
+  background-color: black;
+  color: white;
+}
