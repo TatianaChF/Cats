@@ -1,1 +1,5 @@
-<p>breed-detail works!</p>
+<div *ngIf="breed">
+
+  <label for="breed-name">Порода: </label>
+  <input id="breed-name" [(ngModel)]="breed.name" placeholder="name">
+</div>

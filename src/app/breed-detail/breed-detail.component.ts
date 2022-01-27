@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Breeds } from "../breeds";
 
 @Component({
   selector: 'app-breed-detail',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./breed-detail.component.css']
 })
 export class BreedDetailComponent implements OnInit {
+  @Input() breed?: Breeds;
 
   constructor() { }
 
