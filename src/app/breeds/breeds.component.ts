@@ -23,7 +23,8 @@ export class BreedsComponent implements OnInit {
   }
 
   getBreed(): void {
-    this.breeds = this.breedsService.getBreed();
+    this.breedsService.getBreed()
+      .subscribe(breeds => this.breeds = breeds);
   }
 
 }
