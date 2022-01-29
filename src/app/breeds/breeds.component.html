@@ -27,11 +27,16 @@
   </div>
 </header>
 <section id="about" class="about">
-  <div class="breeds">
+  <div class="container">
     <ul class="breeds">
-      <li *ngFor="let breed of breeds">
+      <li *ngFor="let breed of breeds"
+      [class.selected]="breed === selectedBreed"
+      (click)="onSelect(breed)">
         <span class="badge">{{breed.id}}</span> {{breed.name}}
       </li>
     </ul>
+
+    <app-breed-detail [breed]="selectedBreed"></app-breed-detail>
   </div>
 </section>
+<app-messages></app-messages>
