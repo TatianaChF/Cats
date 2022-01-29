@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Breeds } from "../breeds";
-import { BREEDS } from "../more-breeds";
+import { BreedsService } from "../breeds.service";
 
 @Component({
   selector: 'app-breeds',
@@ -8,11 +8,22 @@ import { BREEDS } from "../more-breeds";
   styleUrls: ['./breeds.component.css']
 })
 export class BreedsComponent implements OnInit {
-  breeds = BREEDS;
 
-  constructor() { }
+  selectedBreed?: Breeds;
+  breeds: Breeds[] = [];
+
+  constructor(private breedsService: BreedsService) { }
 
   ngOnInit(): void {
+    this.getBreed();
+  }
+
+  onSelect(breed: Breeds): void {
+    this.selectedBreed = breed;
+  }
+
+  getBreed(): void {
+    this.breeds = this.breedsService.getBreed();
   }
 
 }
