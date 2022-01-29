@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from "rxjs";
 import { BREEDS } from "./more-breeds";
 import { Breeds } from "./breeds";
 
@@ -7,8 +8,9 @@ import { Breeds } from "./breeds";
 })
 export class BreedsService {
 
-  getBreed(): Breeds[] {
-    return BREEDS;
+  getBreed(): Observable<Breeds[]> {
+    const breeds = of(BREEDS)
+    return breeds;
   }
 
   constructor() { }
