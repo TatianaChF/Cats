@@ -2,18 +2,18 @@
   <div class="container">
     <div class="menu">
       <ul class="menu">
-        <li>
+        <nav>
           <a routerLink="/home" routerLinkActive="active-link">Главная</a>
-        </li>
-        <li>
+        </nav>
+        <nav>
           <a routerLink="/breeds" routerLinkActive="active-link">Породы</a>
-        </li>
-        <li>
+        </nav>
+        <nav>
           <a routerLink="#" routerLinkActive="active-link">Галерея</a>
-        </li>
-        <li>
+        </nav>
+        <nav>
           <a routerLink="#" routerLinkActive="active-link">Искусство</a>
-        </li>
+        </nav>
       </ul>
     </div>
     <div class="offer">
@@ -32,11 +32,12 @@
       <li *ngFor="let breed of breeds"
       [class.selected]="breed === selectedBreed"
       (click)="onSelect(breed)">
-        <span class="badge">{{breed.id}}</span> {{breed.name}}
+        <a routerLink="/detail/{{breed.name}}">
+          {{breed.name}}
+        </a>
       </li>
     </ul>
 
-    <app-breed-detail [breed]="selectedBreed"></app-breed-detail>
   </div>
 </section>
 <app-messages></app-messages>
