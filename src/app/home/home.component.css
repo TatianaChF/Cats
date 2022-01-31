@@ -16,14 +16,14 @@
   display: flex;
 }
 
-ul, li {
+ul, nav {
   display: block;
 
 }
 
-.menu li a {
+.menu nav a {
   position: relative;
-  text-transform: uppercase; /* делает текст жирным */
+  text-transform: uppercase; /* делает текст капсом */
   text-decoration: none;
   color: #ffffff;
   font-size: 30px;
@@ -31,11 +31,11 @@ ul, li {
   left: -20px;
 }
 
-.menu li {
+.menu nav {
   margin-right: 59px;
 }
 
-.menu li a:hover {
+.menu nav a:hover {
   border-bottom: 1px solid #fff;
 }
 
