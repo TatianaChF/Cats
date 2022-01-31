@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Breeds } from "../breeds";
 import { BreedsService } from "../breeds.service";
+import { MessageService } from "../message.service";
 
 @Component({
   selector: 'app-breeds',
@@ -12,7 +13,7 @@ export class BreedsComponent implements OnInit {
   selectedBreed?: Breeds;
   breeds: Breeds[] = [];
 
-  constructor(private breedsService: BreedsService) { }
+  constructor(private breedsService: BreedsService, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getBreed();
@@ -20,6 +21,7 @@ export class BreedsComponent implements OnInit {
 
   onSelect(breed: Breeds): void {
     this.selectedBreed = breed;
+    this.messageService.add(`BreedsComponent: выбрана порода ${name}`);
   }
 
   getBreed(): void {
