@@ -11,7 +11,7 @@ export class BreedsService {
 
   getBreed(): Observable<Breeds[]> {
     const breeds = of(BREEDS);
-    this.messageService.add('BreedsService: порода выбрана');
+    this.messageService.add('BreedsService: выбранные породы');
     return breeds;
   }
 

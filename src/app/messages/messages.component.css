@@ -1,0 +1,20 @@
+h2 {
+  color: #405061;
+  font-family: Cormorant, serif;
+  font-weight: lighter;
+}
+
+.clear {
+  color: #333;
+  font-family: Cormorant, serif;
+  background-color: #EEEEEE;
+  margin-bottom: 12px;
+  padding: 1em;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.clear:hover {
+  color: white;
+  background-color: #42545C;
+}
