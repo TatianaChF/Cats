@@ -10,18 +10,12 @@ import { MessageService } from "../message.service";
 })
 export class BreedsComponent implements OnInit {
 
-  selectedBreed?: Breeds;
   breeds: Breeds[] = [];
 
-  constructor(private breedsService: BreedsService, private messageService: MessageService) { }
+  constructor(private breedsService: BreedsService) { }
 
   ngOnInit(): void {
     this.getBreed();
-  }
-
-  onSelect(breed: Breeds): void {
-    this.selectedBreed = breed;
-    this.messageService.add(`BreedsComponent: выбрана порода ${name}`);
   }
 
   getBreed(): void {
