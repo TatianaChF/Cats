@@ -9,7 +9,7 @@ import { MessageService } from "./message.service";
 })
 export class BreedsService {
 
-  getBreed(): Observable<Breeds[]> {
+    getBreed(title: string): Observable<Breeds[]> {
     const breeds = of(BREEDS);
     this.messageService.add('BreedsService: выбранные породы');
     return breeds;

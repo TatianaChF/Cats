@@ -8,7 +8,7 @@ import { BreedDetailComponent } from "./breed-detail/breed-detail.component";
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'detail/:name', component: BreedDetailComponent },
+  { path: 'detail/:title', component: BreedDetailComponent },
   { path: 'breeds', component: BreedsComponent }
 ];
 
