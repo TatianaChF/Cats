@@ -19,6 +19,7 @@ export class BreedsComponent implements OnInit {
   }
 
   getBreed(): void {
+    // @ts-ignore
     this.breedsService.getBreed()
       .subscribe(breeds => this.breeds = breeds);
   }

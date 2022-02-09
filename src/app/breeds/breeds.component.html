@@ -29,15 +29,12 @@
 <section id="about" class="about">
   <div class="container">
     <ul class="breeds">
-      <li *ngFor="let breed of breeds"
-      [class.selected]="breed === selectedBreed"
-      (click)="onSelect(breed)">
-        <a routerLink="/detail/{{breed.name}}">
-          {{breed.name}}
+      <li *ngFor="let breed of breeds">
+        <a routerLink="/breeds/detail/{{breed.title}}">
+          {{breed.title}}
         </a>
       </li>
     </ul>
-
   </div>
 </section>
 <app-messages></app-messages>

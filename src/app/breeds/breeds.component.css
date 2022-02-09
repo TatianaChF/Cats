@@ -12,15 +12,15 @@
 }
 
 .menu,
-.menu li {
+.menu nav {
   display: flex;
 }
 
-ul, li {
+ul, nav {
   display: block;
 }
 
-.menu li a {
+.menu nav a {
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
@@ -30,11 +30,11 @@ ul, li {
   left: -20px;
 }
 
-.menu li {
+.menu nav {
   margin-right: 59px;
 }
 
-.menu li a:hover {
+.menu nav a:hover {
   border-bottom: 1px solid #000;
 }
 
@@ -80,7 +80,7 @@ ul, li {
   color: #000000;
 }
 
-.breeds {
+.breeds{
   margin: 50px 0 0 0;
   list-style-type: none;
   padding: 0;
@@ -129,3 +129,4 @@ ul, li {
   background-color: black;
   color: white;
 }
+
