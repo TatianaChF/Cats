@@ -9,11 +9,17 @@ import { MessageService } from "./message.service";
 })
 export class BreedsService {
 
+  constructor(private messageService: MessageService) { }
+
     getBreed(title: string): Observable<Breeds[]> {
     const breeds = of(BREEDS);
     this.messageService.add('BreedsService: выбранные породы');
     return breeds;
   }
 
-  constructor(private messageService: MessageService) { }
+  getBreeds(title: string): Observable<Breeds> {
+    const breed = BREEDS.find(b => b.title === title)!;
+    this.messageService.add(`BreedService: fetched breed title=${title}`);
+    return of(breed);
+  }
 }
