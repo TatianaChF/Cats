@@ -28,7 +28,11 @@ export class BreedDetailComponent implements OnInit {
     this.breedsService.getBreed(title)
       .subscribe(breed => this.breeds = breed);
 
-    }
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
 
 
