@@ -12,6 +12,7 @@ export class BreedsService {
 
   constructor(private messageService: MessageService, private http: HttpClient) { }
 
+  private breedsURL = 'api/breeds';
   private log(message: string) {
     this.messageService.add(`BreedsService: ${message}`);
   }
