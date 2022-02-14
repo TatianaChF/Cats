@@ -18,6 +18,7 @@ export class BreedsService {
   getBreeds(title: string): Observable<Breeds[]> {
     return this.http.get<Breeds[]>(this.breedsURL)
       .pipe(
+        tap(_ => this.log('получены породы')),
         catchError(this.handleError<Breeds[]>('getBreeds', []))
       );
   }
