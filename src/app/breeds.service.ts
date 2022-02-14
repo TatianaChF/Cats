@@ -24,9 +24,11 @@ export class BreedsService {
   }
 
   getBreed(title: string): Observable<Breeds> {
-    const breed = BREEDS.find(b => b.title === title)!;
-    this.messageService.add(`BreedsService: fetched breed title=${title}`);
-    return of(breed);
+    const url = `${this.breedsURL}/${title}`;
+    return this.http.get<Breeds>(url).pipe(
+      tap(_ => this.log(`получена порода ${title}`)),
+      catchError(this.handleError<Breeds>(`getBreed ${title}`))
+    );
   }
 
   private log(message: string) {
