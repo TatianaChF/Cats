@@ -20,8 +20,8 @@ export class BreedsComponent implements OnInit {
 
   getBreed(): void {
     // @ts-ignore
-    this.breedsService.getBreed()
-      .subscribe(breeds => this.breeds = breeds);
+    this.breedsService.getBreeds(title)
+        .subscribe(breeds => this.breeds = breeds);
   }
 
 }

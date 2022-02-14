@@ -11,7 +11,7 @@ import { BreedsService } from "../breeds.service";
 })
 export class BreedDetailComponent implements OnInit {
   breed: Breeds | undefined;
-  breeds: Breeds[] | undefined;
+  // breeds: Breeds[] | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,7 +26,7 @@ export class BreedDetailComponent implements OnInit {
   getBreed(): void {
     const title = String(this.route.snapshot.paramMap.get('title'));
     this.breedsService.getBreed(title)
-      .subscribe(breed => this.breeds = breed);
+      .subscribe(breed => this.breed = breed);
 
   }
 
