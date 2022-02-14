@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Breeds } from "../breeds";
+import { BreedsService } from "../breeds.service";
 
 @Component({
   selector: 'app-dashboard',
