@@ -42,4 +42,17 @@ export class BreedsService {
       return of(result as T);
     }
   }
+
+  searchBreeds(term: string): Observable<Breeds[]> {
+    if (!term.trim()) { // если порода не найдена, то возвращается пустой массив
+      // метод trim() удаляет пробелы в начале и в конце строки, не изменяя саму строку
+      return of([]);
+    }
+    return this.http.get<Breeds[]>(`${this.breedsURL}/?title=${term}`).pipe(
+      tap(x => x.length ?
+      this.log(`найден порода, соотвествующая "${term}"`) :
+      this.log(`нет пород, которые соответствуют "${term}"`)),
+      catchError(this.handleError<Breeds[]>('searchHero', []))
+    );
+  }
 }
