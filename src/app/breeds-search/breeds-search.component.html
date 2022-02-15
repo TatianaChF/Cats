@@ -1,1 +1,12 @@
-<p>breeds-search works!</p>
+<div id="search-component">
+  <label for="search-box">Поиск пород</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let breed of breeds$ | async">
+      <a routerLink="/detail/{{breed.title}}">
+        {{breed.title}}
+      </a>
+    </li>
+  </ul>
+</div>
