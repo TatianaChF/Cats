@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+
 import { Observable, of } from "rxjs";
-import { BREEDS } from "./more-breeds";
+import { catchError, map, tap } from "rxjs";
+
 import { Breeds } from "./breeds";
 import { MessageService } from "./message.service";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { catchError, map, tap } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,24 @@ export class BreedsService {
 
   constructor(private messageService: MessageService, private http: HttpClient) { }
 
-  getBreeds(title: string): Observable<Breeds[]> {
+  getBreeds(): Observable<Breeds[]> {
     return this.http.get<Breeds[]>(this.breedsURL)
       .pipe(
         tap(_ => this.log('получены породы')),
         catchError(this.handleError<Breeds[]>('getBreeds', []))
+      );
+  }
+
+  getBreedNo404<Data>(title: string): Observable<Breeds> {
+    const url = `${this.breedsURL}/?title=${title}`;
+    return this.http.get<Breeds[]>(url)
+      .pipe(
+        map(breeds => breeds[0]),
+        tap(b => {
+          const outcome = b ? 'обнаружена' : 'не обнаружна';
+          this.log(`${outcome} breed title=${title}`);
+        }),
+        catchError(this.handleError<Breeds>(`getBreed title=${title}`))
       );
   }
 
