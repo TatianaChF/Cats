@@ -12,6 +12,9 @@ import {FormsModule} from "@angular/forms";
 import { BreedDetailComponent } from './breed-detail/breed-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { BreedsSearchComponent } from './breeds-search/breeds-search.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
     HomeComponent,
     BreedsComponent,
     BreedDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent,
+    BreedsSearchComponent,
+    NotFoundComponent
   ],
     imports: [
         BrowserModule,
@@ -32,6 +38,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
         )
     ],
   providers: [],
+  exports: [BreedsSearchComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
