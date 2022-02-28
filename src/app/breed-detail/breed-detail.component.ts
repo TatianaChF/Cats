@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
-import { Breeds } from "../breeds";
+import { Breed } from "../breeds";
 import { BreedsService } from "../breeds.service";
-import {parseArguments} from "@angular/cli/models/parser";
 
 @Component({
   selector: 'app-breed-detail',
@@ -12,7 +11,7 @@ import {parseArguments} from "@angular/cli/models/parser";
   styleUrls: ['./breed-detail.component.css']
 })
 export class BreedDetailComponent implements OnInit {
-  breed: Breeds | undefined;
+  breed: Breed | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,8 +23,8 @@ export class BreedDetailComponent implements OnInit {
     this.getBreed();
   }
 
-  getBreed(): void {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
+   getBreed(): void {
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 0);
     this.breedsService.getBreed(id)
       .subscribe(breed => this.breed = breed);
 
