@@ -34,7 +34,8 @@
     <ul class="breeds">
       <li *ngFor="let breed of breeds">
         <a routerLink="/detail/{{breed.id}}">
-          <span class="badge">{{breed.id}}</span> {{breed.title}}
+          <img [src]="breed.image" [alt]="breed.alt"> <br>
+          {{breed.title}}
         </a>
       </li>
     </ul>
