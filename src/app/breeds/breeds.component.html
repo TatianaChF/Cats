@@ -33,14 +33,10 @@
   <div class="container">
     <ul class="breeds">
       <li *ngFor="let breed of breeds">
-        <div class="flex-img">
           <img [src]="breed.image" [alt]="breed.alt"> <br>
-        </div>
-          <div class="flex-title">
             <a routerLink="/detail/{{breed.id}}">
               {{breed.title}}
             </a>
-          </div>
       </li>
     </ul>
   </div>
