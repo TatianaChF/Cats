@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BreedsSearchComponent } from './breeds-search/breeds-search.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {CommonModule} from "@angular/common";
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {CommonModule} from "@angular/common";
     MessagesComponent,
     DashboardComponent,
     BreedsSearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
