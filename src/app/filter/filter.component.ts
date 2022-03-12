@@ -16,11 +16,16 @@ export class FilterComponent implements OnInit {
   constructor(private breedsService: BreedsService, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getVarias();
+    // @ts-ignore
+    this.getFilterBreeds();
   }
 
-  getVarias(): void {
-    this.breedsService.getBreeds()
-      .subscribe(breeds => this.breeds = breeds);
+  getFilterBreeds(id: number) {
+    this.breedsService.filterBreeds(id).subscribe(
+      data => {
+        console.log(data);
+        this.breeds = data;
+      }
+    );
   }
 }
