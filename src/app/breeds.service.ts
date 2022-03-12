@@ -59,16 +59,8 @@ export class BreedsService {
   }
 
   // @ts-ignore
-  filterBreeds(species: string): Observable<Breed[]> {
-    if (species == 'Varia') {
-      return this.http.get<Breed[]>(this.breedsURL)
-        .pipe(
-          tap(_ => this.log('получены породы')),
-          catchError(this.handleError<Breed[]>('getBreeds', []))
-        );
-    } else {
-      console.log('Ошибка');
-    }
+  filterBreeds(id: number): Observable<Breed[]> {
+    return this.http.get<Breed[]>(this.breedsURL);
   }
 
 
