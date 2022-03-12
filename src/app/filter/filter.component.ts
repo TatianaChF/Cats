@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from "rxjs";
 
 import { Breed } from "../breeds";
 import { BreedsService } from "../breeds.service";
