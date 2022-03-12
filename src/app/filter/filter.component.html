@@ -1,6 +1,6 @@
 <div id="filter-component" class="filter-component">
-  <div class="filter-button">
-    <button class="all">Все</button>
+  <div class="filter-button" *ngFor="let breed of breeds">
+    <button class="all" (click)="getVarias()">Все</button>
     <button class="shorthair">Короткошерстные</button>
     <button class="longhair">Длинношерстные</button>
     <button class="bald">Лысые</button>
