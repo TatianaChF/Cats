@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Breed } from "../breeds";
+import { BreedsService } from "../breeds.service";
+
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
