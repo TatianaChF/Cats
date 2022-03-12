@@ -3,5 +3,5 @@ export interface Breed {
   title: string;
   image: string;
   alt: string;
-  species: string;
+  filter: string;
 }
