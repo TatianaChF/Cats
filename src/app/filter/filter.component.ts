@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { Breed } from "../breeds";
 import { BreedsService } from "../breeds.service";
 import { Filter } from "../filter";
+import { FILTER } from "../all-filters";
 
 @Component({
   selector: 'app-filter',
@@ -13,7 +14,7 @@ import { Filter } from "../filter";
 })
 export class FilterComponent implements OnInit {
   breeds: Breed[] = [];
-  filters: Filter[] = [];
+  filters = FILTER;
 
   constructor(private breedsService: BreedsService, private http: HttpClient) { }
 
