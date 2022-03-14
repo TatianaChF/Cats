@@ -13,11 +13,16 @@ import { Filter } from "../filter";
 })
 export class FilterComponent implements OnInit {
   breeds: Breed[] = [];
-  filter: Filter[] = [];
+  filters: Filter[] = [];
 
   constructor(private breedsService: BreedsService, private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
+
+  getFilters(): void {
+    this.breedsService.getFilters()
+      .subscribe(filters => this.filters = filters);
   }
 
 }
