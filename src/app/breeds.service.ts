@@ -6,12 +6,15 @@ import { catchError, tap } from "rxjs";
 
 import { Breed } from "./breeds";
 import { MessageService } from "./message.service";
+import { Filter } from "./filter";
+import { FILTER } from "./all-filters";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BreedsService {
 
+  breeds: Breed[] = [];
   private breedsURL = 'api/breeds';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
@@ -56,11 +59,6 @@ export class BreedsService {
 
   private log(message: string) {
     this.messageService.add(`BreedsService: ${message}`);
-  }
-
-  // @ts-ignore
-  filterBreeds(id: number): Observable<Breed[]> {
-    return this.http.get<Breed[]>(this.breedsURL);
   }
 
 
