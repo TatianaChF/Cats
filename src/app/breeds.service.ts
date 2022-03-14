@@ -51,7 +51,11 @@ export class BreedsService {
   }
 
   getFilters(): Observable<Filter[]> {
-    return this.http.get<Filter[]>(this.filterURL);
+    return this.http.get<Filter[]>(this.filterURL)
+      .pipe(
+        tap(_ => this.log('получены фильтры')),
+        catchError(this.handleError<Breed[]>('getFilters', []))
+      );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
