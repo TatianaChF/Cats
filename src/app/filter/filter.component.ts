@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
+import {filter, Observable} from "rxjs";
 import { HttpClient } from "@angular/common/http";
 
 import { Breed } from "../breeds";
 import { BreedsService } from "../breeds.service";
+import { Filter } from "../filter";
 
 @Component({
   selector: 'app-filter',
@@ -12,20 +13,11 @@ import { BreedsService } from "../breeds.service";
 })
 export class FilterComponent implements OnInit {
   breeds: Breed[] = [];
+  filter: Filter[] = [];
 
   constructor(private breedsService: BreedsService, private http: HttpClient) { }
 
   ngOnInit(): void {
-    // @ts-ignore
-    this.getFilterBreeds();
   }
 
-  getFilterBreeds(id: number) {
-    this.breedsService.filterBreeds(id).subscribe(
-      data => {
-        console.log(data);
-        this.breeds = data;
-      }
-    );
-  }
 }
