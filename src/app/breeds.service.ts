@@ -16,6 +16,7 @@ export class BreedsService {
 
   breeds: Breed[] = [];
   private breedsURL = 'api/breeds';
+  private filterURL = 'api/filters'
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
@@ -47,6 +48,10 @@ export class BreedsService {
         this.log(`нет пород, которые соответствуют "${term}"`)),
       catchError(this.handleError<Breed[]>('searchHero', []))
     );
+  }
+
+  getFilters(): Observable<Filter[]> {
+    return this.http.get<Filter[]>(this.filterURL);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
