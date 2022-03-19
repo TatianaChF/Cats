@@ -30,12 +30,12 @@
   <div class="search>">
     <app-breeds-search></app-breeds-search>
   </div>
-  <div class="filte">
+  <div class="filter">
     <app-filter></app-filter>
   </div>
   <div class="container">
     <ul class="breeds">
-      <li *ngFor="let breed of breeds">
+      <li *ngFor="let breed of breeds | filter: searchKey: 'title'">
           <img [src]="breed.image" [alt]="breed.alt"> <br>
             <a routerLink="/detail/{{breed.id}}">
               {{breed.title}}
