@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Breeds } from "../breeds";
+
+import { Breed } from "../breeds";
 import { BreedsService } from "../breeds.service";
-import { MessageService } from "../message.service";
 
 @Component({
   selector: 'app-breeds',
@@ -10,17 +10,17 @@ import { MessageService } from "../message.service";
 })
 export class BreedsComponent implements OnInit {
 
-  breeds: Breeds[] = [];
+  breeds: Breed[] = [];
+  searchKey: string = "";
 
   constructor(private breedsService: BreedsService) { }
 
   ngOnInit(): void {
-    this.getBreed();
+    this.getBreeds();
   }
 
-  getBreed(): void {
-    // @ts-ignore
-    this.breedsService.getBreeds(title)
+  getBreeds(): void {
+    this.breedsService.getBreeds()
         .subscribe(breeds => this.breeds = breeds);
   }
 
