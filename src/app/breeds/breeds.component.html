@@ -31,11 +31,14 @@
     <app-breeds-search></app-breeds-search>
   </div>
   <div class="filter">
-    <app-filter></app-filter>
+    <button class="all" (click)="filter('')">Все</button>
+    <button class="shorthair" (click)="filter('Короткошерстные')">Короткошерстные</button>
+    <button class="longhair" (click)="filter('Длинношерстные')">Длинношерстные</button>
+    <button class="bald" (click)="filter('Лысые')">Лысые</button>
   </div>
   <div class="container">
     <ul class="breeds">
-      <li *ngFor="let breed of breeds | filter: searchKey: 'title'">
+      <li *ngFor="let breed of filterCategory | filter: searchKey: 'title'">
           <img [src]="breed.image" [alt]="breed.alt"> <br>
             <a routerLink="/detail/{{breed.id}}">
               {{breed.title}}
