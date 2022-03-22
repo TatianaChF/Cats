@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
-import { Observable, of } from "rxjs";
+import {BehaviorSubject, Observable, of} from "rxjs";
 import { catchError, tap } from "rxjs";
 
 import { Breed } from "./breeds";
 import { MessageService } from "./message.service";
-import { Filter } from "./filter";
-import { FILTER } from "./all-filters";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +14,7 @@ export class BreedsService {
 
   breeds: Breed[] = [];
   private breedsURL = 'api/breeds';
-  private filterURL = 'api/filters'
+  public search = new BehaviorSubject<string>(""); // переменная, которая хранит последнее значение поиска (начальное значение - пуста строка)
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
@@ -26,7 +24,6 @@ export class BreedsService {
         tap(_ => this.log('получены породы')),
         catchError(this.handleError<Breed[]>('getBreeds', []))
       );
-
   }
 
    getBreed(id: number): Observable<Breed> {
@@ -46,16 +43,8 @@ export class BreedsService {
       tap(x => x.length ?
         this.log(`найден порода, соотвествующая "${term}"`) :
         this.log(`нет пород, которые соответствуют "${term}"`)),
-      catchError(this.handleError<Breed[]>('searchHero', []))
+      catchError(this.handleError<Breed[]>('searchBreeds', []))
     );
-  }
-
-  getFilters(): Observable<Filter[]> {
-    return this.http.get<Filter[]>(this.filterURL)
-      .pipe(
-        tap(_ => this.log('получены фильтры')),
-        catchError(this.handleError<Breed[]>('getFilters', []))
-      );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
