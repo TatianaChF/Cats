@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false
 })
 export class FilterPipe implements PipeTransform {
 
@@ -11,7 +12,7 @@ export class FilterPipe implements PipeTransform {
       return value;
     }
     value.forEach((a: any) => {
-      if(a[propName].trim().toLowerCase().include(filterBreeds.toLowerCase())) {
+      if(a[propName].trim().toLowerCase().includes(filterBreeds.toLowerCase())) {
         result.push(a);
       }
     });
