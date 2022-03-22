@@ -15,7 +15,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BreedsSearchComponent } from './breeds-search/breeds-search.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CommonModule } from "@angular/common";
-import { FilterComponent } from './filter/filter.component';
 import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     DashboardComponent,
     BreedsSearchComponent,
     NotFoundComponent,
-    FilterComponent,
     FilterPipe
   ],
   imports: [
