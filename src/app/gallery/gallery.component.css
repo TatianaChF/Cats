@@ -1,0 +1,7 @@
+.header {
+  background: url("../../assets/images/gallery/main.jpg") no-repeat center top / cover;
+  height: 540px;
+  padding-top: 62px;
+  color: black;
+  padding-bottom: 322px;
+}
