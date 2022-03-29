@@ -81,3 +81,24 @@ ul, nav {
   background-color: transparent;
   color: #000000;
 }
+
+.about {
+  height: 934px;
+  padding-top: 20px;
+  color: #000000;
+  padding-bottom: 80px;
+  display: flex;
+}
+
+h2 {
+  position: relative;
+  font-size: 36px;
+  left: 25px;
+}
+
+.about p {
+  position: relative;
+  font-size: 20px;
+  line-height: 36px;
+  left: 25px;
+}
