@@ -5,3 +5,36 @@
   color: black;
   padding-bottom: 322px;
 }
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.menu,
+.menu nav {
+  display: flex;
+}
+
+ul, nav {
+  display: block;
+}
+
+.menu nav a {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  line-height: 44px;
+  left: 20px;
+  top: 17px;
+}
+
+.menu nav {
+  margin-right: 59px;
+}
+
+.menu nav a:hover {
+  border-bottom: 1px solid #ffffff;
+}
