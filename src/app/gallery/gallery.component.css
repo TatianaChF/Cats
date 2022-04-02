@@ -102,3 +102,10 @@ h2 {
   line-height: 36px;
   left: 25px;
 }
+
+.line {
+  color: #000000;
+  margin-top: 100px;
+  left: 25px;
+  border: 1px solid #000000;
+}
