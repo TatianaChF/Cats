@@ -34,11 +34,13 @@
       Приятного просмотра!
     </p>
     <div class="line"></div>
-    <div class="gallery">
-      <figure class="gallery_item" *ngFor="let photo of gallery">
-        <img [src]="photo.image" [alt]="photo.alt" [class]="photo.styles">
-      </figure>
+    <div class="container_gallery">
+      <div class="gallery">
+        <div class="image" *ngFor="let photo of gallery" [style.dridRow]="photo.row" [style.gridCol]="photo.col">
+          <img [src]="photo.image" [alt]="photo.alt" [style]="photo.styles">
+          <span>+</span>
+        </div>
+      </div>
     </div>
-  </div>
-
+    </div>
 </section>
