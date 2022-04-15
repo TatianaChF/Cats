@@ -113,7 +113,7 @@ h2 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(5,300px);g
+  grid-template-rows: repeat(5,300px);
   width: 100%;
   margin-top: 50px;
 }
@@ -126,7 +126,7 @@ h2 {
   position: relative;
   cursor: pointer;
 
-  filter: drop-shadow(1px 2px 3px black);
+
 }
 
 .gallery .image img {
@@ -145,7 +145,7 @@ h2 {
   height: 100%;
   opacity: 0; /* непрозрачность элемента */
   font-size: 3rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: #ffffff;
   pointer-events: none;
