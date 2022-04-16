@@ -1,1 +1,46 @@
-<p>gallery works!</p>
+<header class="header" id="header">
+  <div class="container">
+    <div class="menu">
+      <ul class="menu">
+        <nav>
+          <a routerLink="/home" routerLinkActive="active-link">Главная</a>
+        </nav>
+        <nav>
+          <a routerLink="/breeds" routerLinkActive="active-link">Породы</a>
+        </nav>
+        <nav>
+          <a routerLink="/gallery" routerLinkActive="active-link">Галерея</a>
+        </nav>
+        <nav>
+          <a routerLink="#" routerLinkActive="active-link">Искусство</a>
+        </nav>
+      </ul>
+    </div>
+    <div class="offer">
+      <h1>Красота и изящество</h1>
+      <p>Кошки - одни из самых фотогеничных <br>
+        созданий в мире</p>
+      <a href="#" class="bth">Смотреть породы</a>
+    </div>
+  </div>
+</header>
+<section id="about" class="about">
+  <div class="container">
+    <h2>Фотографии</h2>
+    <p>
+      В данной категории представлены одни из самых красивых фотографий кошек. Хотя... Разве могут быть фотографии
+      кошек некрасивыми? <br>
+      Надеемся, что Вы получите эстетическое удовлетворение от этих прекрасных созданий! <br>
+      Приятного просмотра!
+    </p>
+    <div class="line"></div>
+    <div class="container_gallery">
+      <div class="gallery">
+        <div class="image" *ngFor="let photo of gallery" [style.dridRow]="photo.row" [style.gridCol]="photo.col">
+          <img [src]="photo.image" [alt]="photo.alt" [style]="photo.styles">
+          <span>+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
