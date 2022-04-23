@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { GalleriaModule } from 'primeng/galleria';
+import { HttpClient } from "@angular/common/http";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class PhotoService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
