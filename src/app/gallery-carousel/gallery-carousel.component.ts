@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleriaModule } from 'primeng/galleria';
 
 @Component({
   selector: 'app-gallery-carousel',
@@ -6,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery-carousel.component.css']
 })
 export class GalleryCarouselComponent implements OnInit {
-
-  constructor() { }
 
   ngOnInit(): void {
   }
