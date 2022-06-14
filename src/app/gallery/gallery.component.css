@@ -1,8 +1,7 @@
 .header {
   background: url("../../assets/images/gallery/main.jpg") no-repeat center top / cover;
-  height: 540px;
+  height: 940px;
   padding-top: 62px;
-  color: black;
   padding-bottom: 322px;
 }
 
@@ -43,7 +42,7 @@ ul, nav {
   margin-top: 301px;
   font-size: 50px;
   line-height: 73px;
-  left: 316px;
+  left: 370px;
   font-weight: bolder;
   color: white;
 }
@@ -53,7 +52,7 @@ ul, nav {
   margin-top: 385px;
   font-size: 25px;
   line-height: 40px;
-  left: 316px;
+  left: 370px;
   font-weight: normal;
   color: white;
 }
@@ -70,10 +69,10 @@ ul, nav {
   border-radius: 57px;
   background: #000000;
   position: absolute;
-  width: 240px;
-  height: 35px;
+  width: 340px;
+  height: 70px;
   margin-top: 495px;
-  left: 316px;
+  left: 370px;
   text-decoration: none;
 }
 
@@ -169,3 +168,4 @@ h2 {
   display: grid;
   align-items: center;
 }
+
