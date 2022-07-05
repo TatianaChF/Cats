@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
-import {BehaviorSubject, Observable, of} from "rxjs";
-import { catchError, tap } from "rxjs";
+import {BehaviorSubject, catchError, Observable, of, tap} from "rxjs";
 
-import { Breed } from "./breeds";
-import { MessageService } from "./message.service";
+import {Breed} from "../breeds";
+import {MessageService} from "./message.service";
 
 @Injectable({
   providedIn: 'root'

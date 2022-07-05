@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { Breed } from "../breeds";
-import { BreedsService } from "../breeds.service";
+import {Breed} from "../breeds";
+import {BreedsService} from "../services/breeds.service";
 
 @Component({
   selector: 'app-breeds',
