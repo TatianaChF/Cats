@@ -12,7 +12,7 @@
           <a routerLink="/gallery" routerLinkActive="active-link">Галерея</a>
         </nav>
         <nav>
-          <a routerLink="#" routerLinkActive="active-link">Искусство</a>
+          <a routerLink="/carousel" routerLinkActive="active-link">Искусство</a>
         </nav>
       </ul>
     </div>
@@ -36,11 +36,15 @@
     <div class="line"></div>
     <div class="container_gallery">
       <div class="gallery">
-        <div class="image" *ngFor="let photo of gallery" [style.dridRow]="photo.row" [style.gridCol]="photo.col">
-          <img [src]="photo.image" [alt]="photo.alt" [style]="photo.styles">
+        <div class="image" *ngFor="let photo of images; let i = index" [style.dridRow]="photo.row" [style.gridCol]="photo.col">
+          <img [src]="photo.image" [alt]="photo.alt" [style]="photo.styles" (click)="selectedImage = i">
           <span>+</span>
         </div>
       </div>
     </div>
     </div>
 </section>
+<app-gallery-carousel *ngIf="selectedImage !== null" (closeCarousel)="selectedImage = null" [images]="images" [selectedImage]="selectedImage!"></app-gallery-carousel>
+
+
+
