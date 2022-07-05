@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Location} from "@angular/common";
 
-import {Breed} from "../breeds";
+import {Breed} from "../interfaces/breeds";
 import {BreedsService} from "../services/breeds.service";
 
 @Component({

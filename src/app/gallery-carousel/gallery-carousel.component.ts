@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Gallery} from "../gallery";
+import {Gallery} from "../interfaces/gallery";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({

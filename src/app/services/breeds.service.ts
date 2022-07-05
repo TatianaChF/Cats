@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 
 import {BehaviorSubject, catchError, Observable, of, tap} from "rxjs";
 
-import {Breed} from "../breeds";
+import {Breed} from "../interfaces/breeds";
 import {MessageService} from "./message.service";
 
 @Injectable({

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Gallery} from "../gallery";
+import {Gallery} from "../interfaces/gallery";
 
 @Component({
   selector: 'app-gallery',

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 
-import {Breed} from "../breeds";
+import {Breed} from "../interfaces/breeds";
 import {BreedsService} from "../services/breeds.service";
 
 @Component({
