@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AccordionModule } from 'primeng/accordion';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,8 @@ import { BreedsSearchComponent } from './breeds-search/breeds-search.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CommonModule } from "@angular/common";
 import { FilterPipe } from './pipes/filter.pipe';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryCarouselComponent } from './gallery-carousel/gallery-carousel.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +32,13 @@ import { FilterPipe } from './pipes/filter.pipe';
     DashboardComponent,
     BreedsSearchComponent,
     NotFoundComponent,
-    FilterPipe
+    FilterPipe,
+    GalleryComponent,
+    GalleryCarouselComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -39,8 +47,7 @@ import { FilterPipe } from './pipes/filter.pipe';
       InMemoryDataService, {dataEncapsulation: false}
     ),
     CommonModule,
-    CommonModule,
-    CommonModule
+    AccordionModule
   ],
   providers: [],
   exports: [BreedsSearchComponent],
