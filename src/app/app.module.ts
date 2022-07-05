@@ -21,6 +21,7 @@ import {CommonModule} from "@angular/common";
 import {FilterPipe} from './pipes/filter.pipe';
 import {GalleryComponent} from './gallery/gallery.component';
 import {GalleryCarouselComponent} from './gallery-carousel/gallery-carousel.component';
+import {ArtComponent} from './art/art.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {GalleryCarouselComponent} from './gallery-carousel/gallery-carousel.comp
     NotFoundComponent,
     FilterPipe,
     GalleryComponent,
-    GalleryCarouselComponent
+    GalleryCarouselComponent,
+    ArtComponent
   ],
   imports: [
     BrowserModule,
