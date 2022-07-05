@@ -1,4 +1,4 @@
-import {Gallery} from "./interfaces/gallery";
+import {Gallery} from "../interfaces/gallery";
 
 export const GALLERY: Gallery[] = [
   { id: 1, image: 'assets/images/gallery/1.jpg', alt: 'Photo one', styles: 'gallery_item_1', row: '1', col: '1' },

@@ -1,4 +1,4 @@
-import {Breed} from "./interfaces/breeds";
+import {Breed} from "../interfaces/breeds";
 
 export const BREEDS: Breed[] = [
   { id: 1, title: 'Абиссинская кошка', image: 'assets/images/breeds/Abyssinian_cat.svg', alt: 'Photo Abyssinian Cat', category: 'Короткошерстные'},
