@@ -81,3 +81,15 @@ ul, nav {
   background-color: transparent;
   color: #000000;
 }
+
+h2 {
+  font-size: 30px;
+  margin-top: 65px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 36px;
+  width: 1170px;
+  margin-top: 25px;
+}
