@@ -27,4 +27,15 @@ export const IMAGE_DIFFERENT: Gallery[] = [
   { id: 20, image: 'assets/images/art/different view/hissing cat.jpg', alt: 'Hissing Cat', styles: 'twenty' },
   { id: 21, image: 'assets/images/art/different view/royal cat.jpg', alt: 'Royal Cat', styles: 'twenty_one' },
   { id: 22, image: 'assets/images/art/different view/cat and flowers.jpg', alt: 'Cat And Flowers', styles: 'twenty_two' }
+];
+
+export const IMAGE_AFTER: Gallery[] = [
+  { id: 23, image: 'assets/images/art/after/Olympia', alt: 'Olympia', styles: 'twenty_three' },
+  { id: 24, image: 'assets/images/art/after/Clara Peeters.webp', alt: 'Clara Peeters', styles: 'twenty_four' },
+  { id: 25, image: 'assets/images/art/after/Théophile Steinlen.webp', alt: 'Théophile Steinlen', styles: 'twenty_five' },
+  { id: 26, image: 'assets/images/art/after/Paris through the Window.webp', alt: 'Paris through the Window', styles: 'twenty_six' },
+  { id: 27, image: 'assets/images/art/after/Cat Catching a Bird.webp', alt: 'Cat Catching a Bird', styles: 'twenty_seven' },
+  { id: 28, image: 'assets/images/art/after/Maurits Cornelis Escher.webp', alt: 'Maurits Cornelis Escher', styles: 'twenty_eight' },
+  { id: 29, image: 'assets/images/art/after/Andy Warhol.webp', alt: 'Andy Warhol', styles: 'twenty_nine' },
+  { id: 30, image: 'assets/images/art/after/Leonardo Da Vinci.webp', alt: 'Leonardo Da Vinci', styles: 'thirty' }
 ]
