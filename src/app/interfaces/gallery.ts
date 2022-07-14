@@ -3,6 +3,6 @@ export interface Gallery {
   image: string;
   alt: string;
   styles: string;
-  row: string;
-  col: string;
+  row?: string;
+  col?: string;
 }

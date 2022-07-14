@@ -1,0 +1,95 @@
+.header {
+  background: url("../../assets/images/art/main image.png") no-repeat center top / cover;
+  height: 940px;
+  padding-top: 62px;
+  padding-bottom: 322px;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.menu,
+.menu nav {
+  display: flex;
+}
+
+ul, nav {
+  display: block;
+}
+
+.menu nav a {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  line-height: 44px;
+  left: -20px;
+}
+
+.menu nav {
+  margin-right: 59px;
+}
+
+.menu nav a:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.offer h1 {
+  position: absolute;
+  margin-top: 301px;
+  font-size: 50px;
+  line-height: 73px;
+  left: 370px;
+  font-weight: bolder;
+  color: white;
+}
+
+.offer p {
+  position: absolute;
+  margin-top: 385px;
+  font-size: 20px;
+  width: 561px;
+  line-height: 40px;
+  left: 370px;
+  font-weight: normal;
+  color: white;
+}
+
+.bth {
+  color: #ffffff;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 17px 47px;
+  transition: all 0.5s ease;
+  border:  solid #000000;
+  border-radius: 57px;
+  background: #000000;
+  position: absolute;
+  width: 340px;
+  height: 70px;
+  margin-top: 580px;
+  left: 370px;
+  text-decoration: none;
+}
+
+.bth:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 65px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 36px;
+  width: 1170px;
+  margin-top: 25px;
+}
