@@ -1,7 +1,8 @@
 .header {
   background: url("../../assets/images/gallery/main.jpg") no-repeat center top / cover;
-  height: 940px;
+  height: 640px;
   padding-top: 62px;
+  color: #fff;
   padding-bottom: 322px;
 }
 
