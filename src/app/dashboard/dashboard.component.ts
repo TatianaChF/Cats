@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Breeds } from "../breeds";
-import { BreedsService } from "../breeds.service";
+import {Component, OnInit} from '@angular/core';
+import {Breed} from "../interfaces/breeds";
+import {BreedsService} from "../services/breeds.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,7 @@ import { BreedsService } from "../breeds.service";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  breeds: Breeds[] | undefined;
+  breeds: Breed[] | undefined;
 
   constructor(private breedsService: BreedsService) { }
 
