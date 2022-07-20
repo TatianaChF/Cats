@@ -99,6 +99,18 @@ p {
 }
 
 .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-image {
   background-color: #2C2C2C;
   padding: 1.5rem;
   position: relative;

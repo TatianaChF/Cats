@@ -50,12 +50,14 @@
       стали использовать в практических целях как охотников. <br> В римской и греческой живописи изображения кошек
       можно было встретить на монетах, амфорах, мозаиках и тд. Но они не считались божественными, кошки были лишь
       союзниками в борьбе с грызунами.</p>
-    <div class="carousel" *ngFor="let photo of images_egypt" (click)="onEvent($event)">
-      <img [src]="photo.image" [alt]="photo.alt">
-      <div class="carousel-button">
-        <span tabindex="1" (click)="previous()">&lt;</span>
-        <span></span>
-        <span tabindex="2" (click)="next()">&gt;</span>
+    <div class="carousel">
+      <div class="carousel-image" *ngFor="let photo of images_egypt" (click)="onEvent($event)">
+        <img [src]="photo.image" [alt]="photo.alt">
+        <div class="carousel-button">
+          <span tabindex="1" (click)="previous()">&lt;</span>
+          <span></span>
+          <span tabindex="2" (click)="next()">&gt;</span>
+        </div>
       </div>
     </div>
     <h3>Другой взгляд на кошек</h3>
