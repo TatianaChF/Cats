@@ -1,6 +1,6 @@
 .header {
   background: url("../../assets/images/breeds/kotik_one.jpg") no-repeat center top / cover;
-  height: 940px;
+  height: 640px;
   padding-top: 62px;
   color: black;
   padding-bottom: 322px;
@@ -68,8 +68,8 @@ ul, nav {
   border-radius: 57px;
   background: #000000;
   position: absolute;
-  width: 368px;
-  height: 70px;
+  width: 268px;
+  height: 30px;
   margin-top: 495px;
   left: 370px;
   text-decoration: none;

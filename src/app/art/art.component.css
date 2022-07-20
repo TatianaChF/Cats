@@ -1,6 +1,6 @@
 .header {
   background: url("../../assets/images/art/main image.png") no-repeat center top / cover;
-  height: 940px;
+  height: 640px;
   padding-top: 62px;
   padding-bottom: 322px;
 }
@@ -60,7 +60,7 @@ ul, nav {
 
 .bth {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   display: block;
   text-align: center;
   letter-spacing: 0.1em;
@@ -70,8 +70,8 @@ ul, nav {
   border-radius: 57px;
   background: #000000;
   position: absolute;
-  width: 340px;
-  height: 70px;
+  width: 268px;
+  height: 30px;
   margin-top: 580px;
   left: 370px;
   text-decoration: none;

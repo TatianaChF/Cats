@@ -1,6 +1,6 @@
 .header {
   background: url("../../assets/images/home/birma.jpg") no-repeat center top / cover;
-  height: 940px;
+  height: 640px;
   padding-top: 62px;
   color: #fff;
   padding-bottom: 322px;
@@ -71,8 +71,8 @@ ul, nav {
   border-radius: 57px;
   background: #000000;
   position: absolute;
-  width: 350px;
-  height: 70px;
+  width: 240px;
+  height: 30px;
   top: 680px;
   text-decoration: none;
 }
