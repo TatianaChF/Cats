@@ -31,6 +31,11 @@ export class ArtComponent implements OnInit {
     this.blur();
   }
 
+  public onEvent(event: Event): void {
+    event.stopPropagation();
+  }
+
+
   private blur(): void {
     const activeElement = document.activeElement as HTMLElement;
     if(activeElement !== null) {
