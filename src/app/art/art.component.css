@@ -83,8 +83,12 @@ ul, nav {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 65px;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 p {
