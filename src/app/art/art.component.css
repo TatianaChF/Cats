@@ -97,3 +97,51 @@ p {
   width: 1170px;
   margin-top: 25px;
 }
+
+.carousel {
+  background-color: #2C2C2C;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  width: 1170px;
+  height: 395px;
+}
+
+img {
+  max-width: 50vw;
+  max-height: 70vh;
+}
+
+.carousel-button {
+  padding: 1.5rem;
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0; /* ! */
+  left: 0;
+  right: 0;
+}
+
+span {
+  color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0.5rem;
+  flex-grow: 1;
+}
+
+span:nth-child(3) {
+  justify-content: flex-end;
+}
+
+span:not(:nth-child(2)) {
+  cursor: pointer;
+}
+
+span:not(:nth-child(2)):focus,
+span:not(:nth-child(2)):hover {
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
