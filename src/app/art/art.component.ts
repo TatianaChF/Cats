@@ -19,4 +19,23 @@ export class ArtComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public previous(): void {
+    this.animState = 'left';
+    this.animImage = this.animImage > 0 ? this.animImage - 1 : this.images_egypt.length - 1;
+    this.blur();
+  }
+
+  public next(): void {
+    this.animState = 'right';
+    this.animImage = this.animImage < this.images_egypt.length - 1 ? this.animImage + 1 : 0;
+    this.blur();
+  }
+
+  private blur(): void {
+    const activeElement = document.activeElement as HTMLElement;
+    if(activeElement !== null) {
+      activeElement.blur();
+    }
+  }
+
 }
